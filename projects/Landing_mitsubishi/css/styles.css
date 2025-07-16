@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-SemiBold';
+    src: url('fonts/Roboto-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Variable';
+    src: url('fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: 400; /* Adjust as needed */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding-top: 160px;
+    background-color: #740000;
+    color: #9c0000;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    padding: 20px 0;
+    padding-bottom: 0px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 60px;
+    font-family: Roboto-Bold, sans-serif;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    display: grid;
+    place-items:center;
+    grid-template-rows: 1fr 3fr;
+    padding: 40px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #FFFFFF;
+    scroll-margin-top: 140px;
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+section h2 {
+    font-family: Montserrat-Bold;
+    font-weight: bold;
+    font-size: 50px;
+    margin-top: 0;
+}
+
+section p {
+    font-family: Roboto-SemiBold;
+    font-size: 20px;
+}
+
+nav button {
+    border: 5px solid;
+    background-color: #FFFFFF;
+    border-color: #420000;
+    border-radius: 15px;
+    font-family: Montserrat-Bold, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #420000;
+    color: #FFFFFF;
+}
+#about {
+    background-color: #ffffff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/section1_bkg.webp);
+    min-height: 400px;
+}
+
+#models {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../img/section2_bkg.jpeg);
+    min-height: 400px;
+}
+
+#contact {
+    background-color: #910000; 
+}
+
+#contact a {
+    color:#FFFFFF;
+    text-decoration: underline
+}
+
+footer {
+    background-color: #9c0000;
+    color: #FFFFFF; 
+    text-align: center;
+    padding: 10px 0;
+
+    bottom: 0;
+    width: 100%;
+}
+
+.darker-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100%;
+    padding: 10px;
+}
