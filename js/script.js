@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description: 'Landing page básica para Mitsubishi.',
             imageUrl: '/projects/Landing_mitsubishi/img/thumbnail.jpg', // Ruta a la imagen del proyecto
             liveUrl: './projects/Landing_mitsubishi/index.html', // Enlace a la demo en vivo
-            repoUrl: '#'  // Enlace al repositorio de código
+            repoUrl: 'https://github.com/Gaboromay/web-test/tree/main/projects/Landing_mitsubishi'  // Enlace al repositorio de código
         },
         {
             title: 'Proyecto Beta',
