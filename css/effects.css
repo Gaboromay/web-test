@@ -1,0 +1,67 @@
+/* --- EFECTO DE BORDE ILUMINADO PARA TARJETAS DE PROYECTO --- */
+
+/* Registramos la variable --angle para que el navegador sepa cómo animarla. */
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+
+.project-card {
+    position: relative;
+    /* z-index ya no es necesario aquí, lo manejamos en los hijos */
+}
+
+/* El pseudoelemento que crea el borde brillante */
+.project-card::before {
+    content: ''; /* Necesario para que el pseudoelemento aparezca */ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Hacemos el elemento un poco más grande que la tarjeta para que el brillo sobresalga */
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    z-index: 1; /* Lo ponemos en una capa inferior, pero visible */
+
+    /* Creamos un gradiente cónico que usa el color del proyecto.
+       La mayor parte es transparente, con un segmento del color del proyecto. */
+    background: conic-gradient(
+        from var(--angle, 0deg),
+        transparent 20%,
+        transparent 70%,
+        /* Usamos la variable global del color primario.*/
+        var(--primary-color, #007bff) 95%
+    );
+
+    /* Hereda el borde redondeado de la tarjeta si lo tuviera */
+    border-radius: inherit;
+
+    /* Filtro blurpara el efecto difuminado */
+    filter: blur(10px);
+
+    /* Ocultamos el brillo por defecto */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+
+    /* La animación se moverá a la regla :hover */
+}
+
+/* Al pasar el mouse sobre la tarjeta... */
+.project-card:hover::before {
+    /* ...hacemos visible el brillo */
+    opacity: 0.9;
+    /* ...y APLICAMOS la animación para que comience a girar */
+    animation: spin-border 4s linear infinite;
+}
+
+/* Definición de la animación que rota el ángulo del gradiente */
+@keyframes spin-border {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
