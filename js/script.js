@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
             repoUrl: 'https://github.com/Gaboromay/web-test/tree/main/projects/Landing_mitsubishi'  // Enlace al repositorio de código
         },
         {
-            title: 'Proyecto Beta',
-            description: 'Descripción del segundo proyecto.',
-            imageUrl: '#',
-            liveUrl: '#',
-            repoUrl: '#'
+            title: 'Golfeados de antaño',
+            description: 'Pagina web de la tienda "Golfeados de antaño".',
+            imageUrl: './assets/images/thumbnail-golfeados.png',
+            liveUrl: 'https://golfeados-antano.vercel.app/',
+            repoUrl: 'https://github.com/Gaboromay/golfeados_antano.git'
         },
         {
             title: 'Proyecto Gamma',
