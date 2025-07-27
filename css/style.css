@@ -42,6 +42,36 @@ header {
     z-index: 100;
 }
 
+.logo-content {
+    display: flex;
+    flex-direction: row; /* Ensure row direction */
+    align-items: center;
+}
+
+.logo-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column; /* Stack h1 and tagline vertically */
+    justify-content: center; /* Vertically center text next to logo */
+}
+
+.logo-text h1 {
+    margin: 0;
+}
+
+.logo-text .tagline {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-style: italic;
+    margin-top: 5px;
+}
+
 /* --- Botón Modo Oscuro --- */
 .dark-mode-button {
     background-color: var(--secondary-color);
